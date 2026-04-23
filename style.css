@@ -8,38 +8,52 @@ body {
     line-height: 1.6;
 }
 /* NAVBAR */
-nav {
-    display: flex;
-    justify-content:space-between;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background: white;
-    position: sticky;
-    top: 10;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
 }
-
-.logo {
-    padding-bottom: 20px;
-    padding-left: 60px;
+/* Logo */
+.logo img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding-top: 50px;
+/* Nav links container */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
-
-nav ul li {
-    margin-left: 20px;
+/* Links */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
 }
+/* WhatsApp button */
+.whatsapp-btn {
+  background-color:#2596be;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
 
-nav a {
-    text-decoration: none;
-    color: #333;
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
 }
 
 /* HERO */
@@ -167,18 +181,42 @@ h2 {
     margin: auto;
 }
 .info {
-    height: 85vh;
-    background: url(./manufacturers.png) no-repeat scroll;
+    min-height: 85vh;
+    background: url(./manufacturers.png) no-repeat center/cover;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
-.info h1{
-    color: white;
+
+/* Main heading */
+.info h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* Sub text */
+.info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+
+  .info h1 {
+    font-size: 24px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .info {
+    padding: 30px 15px;
+  }
+
 }
 
 /* CONTACT */
